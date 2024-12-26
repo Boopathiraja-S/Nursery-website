@@ -13,7 +13,7 @@ const LandingPage = () => {
                         <p className='font-semibold'>Live with nature</p>
                         <Link to={"/product-list"}>
                             <button
-                                className='bg-pink-700 text-white font-bold text-lg rounded-md w-40 h-10 hover:bg-pink-600'
+                                className='bg-pink-700 text-white font-bold text-lg rounded-md w-40 h-10 hover:bg-pink-600 hover:scale-110'
                             >
                                 Get Started</button>
                         </Link>

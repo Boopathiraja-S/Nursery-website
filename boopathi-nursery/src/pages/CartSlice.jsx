@@ -15,15 +15,15 @@ const Cart = () => {
         const filteredItems = parsedItems.filter(item => item && typeof item === "object" && typeof item.price === "string");
 
         // Ensure each item has a quantity
-        const updatedItems = filteredItems.map(item => ({ ...item, quantity: item.quantity || 1 }));
-        setCartItems(updatedItems);
+        const updateQuantity = filteredItems.map(item => ({ ...item, quantity: item.quantity || 1 }));
+        setCartItems(updateQuantity);
 
         // Calculate total quantity
-        const totalQuantity = updatedItems.reduce((count, item) => count + item.quantity, 0);
+        const totalQuantity = updateQuantity.reduce((count, item) => count + item.quantity, 0);
         setCartCount(totalQuantity);
     }, []);
 
-    function handleRemoveCart(plantId) {
+    function removeItem(plantId) {
         const UpdatedItems = cartItems.filter(item => item && item.id !== plantId);
         setCartItems(UpdatedItems);
         const totalQuantity = UpdatedItems.reduce((count, item) => count + item.quantity, 0);
@@ -125,7 +125,7 @@ const Cart = () => {
                                         </div>
                                         <p className='line-clamp-2 capitalize'> <span className='text-gray-600 font-semibold'>Description : </span>{item.description}</p>
                                         <button
-                                            onClick={() => handleRemoveCart(item.id)}
+                                            onClick={() => removeItem(item.id)}
                                             className='bg-red-600 w-20 self-center text-white rounded-xl p-1 hover:bg-red-500 hover:scale-105'>Delete</button>
                                     </div>
                                 </div>)
@@ -153,7 +153,7 @@ const Cart = () => {
                             )
                     }
                     <Link to={"/product-list"}>
-                        <button className='bg-blue-700 p-2 text-white font-semibold rounded-2xl hover:scale-105 hover:bg-blue-600'>Go Back</button>
+                        <button className='bg-blue-700 p-2 text-white font-semibold rounded-2xl hover:scale-105 hover:bg-blue-600'>Continue Shoping</button>
                     </Link>
                 </div>
 

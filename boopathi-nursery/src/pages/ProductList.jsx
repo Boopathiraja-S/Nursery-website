@@ -146,6 +146,7 @@ const AllPlantList = [
   }
 ];
 
+
 const GetList = AllPlantList.flatMap(plant => Object.values(plant))
 
 const ExtractPlantList = GetList.flatMap(plant => Object.values(plant))

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import LandingPage from './pages/LandingPage'
 import ProductList from './pages/ProductList'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Cart from './pages/Cart'
+import CartSlice from './pages/CartSlice'
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={< LandingPage />}></Route>
           <Route path='/product-list' element={<ProductList />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/cart' element={<CartSlice />}></Route>
         </Routes>
       </Router>
     </div>
