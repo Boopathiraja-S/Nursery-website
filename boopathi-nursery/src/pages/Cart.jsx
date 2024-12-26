@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from "../assets/NurseryIcon.png"
 import { FaShoppingCart } from "react-icons/fa";
-import Styless from "./Cart.module.css"
 
 const Cart = () => {
 
@@ -74,7 +73,7 @@ const Cart = () => {
     }
 
     return (
-        <div style={Styless.body}>
+        <div>
             {/* nav bar */}
             <div className='bg-green-500 fixed w-full z-40 top-0'>
                 <div className='flex items-center justify-between p-4'>

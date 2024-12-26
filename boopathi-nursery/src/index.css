@@ -5,3 +5,19 @@
 ::-webkit-scrollbar{
     display: none;
 }
+/* Ensure background image is only applied when needed */
+#landing-page {
+    background-image:url("./assets/background1.jpg");  /* Only use image if needed */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Ensure background color doesn't get overridden */
+  body {
+    background-color: rgba(230, 29, 169, 0.253); 
+     /* Keep background color if no image is used */
+  }
+  
